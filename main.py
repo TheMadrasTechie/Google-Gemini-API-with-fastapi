@@ -33,7 +33,7 @@ async def image_prompt(file: UploadFile = File(...)):
         file_object.write(await file.read())
     
     # Return the name of the saved file
-    return google_gemini_work.get_gemini_response("Your_text_prompt","saved_images\\"+filename)
+    return google_gemini_work.get_gemini_response("Get the coupon code from the image in a json format with key coupon_code","saved_images\\"+filename)
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

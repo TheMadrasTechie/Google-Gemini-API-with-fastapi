@@ -2,7 +2,7 @@ from PIL import Image
 import google.generativeai as genai
 import json
 
-genai.configure(api_key="Your_API_Key")
+genai.configure(api_key="AIzaSyCLPRDy8yXvcbpBu0LoMssojeO9yJaq3DI")
 
 
 def parse_json_string_manual(json_string):
@@ -29,10 +29,7 @@ def parse_json_string_manual(json_string):
 
         # Return only the specific fields
         return { 
-            "color": json_data.get("color"),
-            "brand_name": json_data.get("brand_name"),
-            "license_number": json_data.get("license_number"),
-            "american_state": json_data.get("american_state")
+            "coupon_code": json_data.get("coupon_code")
         }
     except IndexError:
         return "Error: Incorrectly formatted string."
