@@ -2,7 +2,7 @@ from PIL import Image
 import google.generativeai as genai
 import json
 
-genai.configure(api_key="AIzaSyCLPRDy8yXvcbpBu0LoMssojeO9yJaq3DI")
+genai.configure(api_key="Your_API_KEY")
 
 
 def parse_json_string_manual(json_string):
